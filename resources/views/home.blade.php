@@ -3,28 +3,28 @@
 <ul>
     @foreach ($trains as $train)
         <li>
-            <h3>{{ $train->train_code }}</h3>
-            <h4>{{ $train->company }}</h4>
+            <h3>Train code: {{ $train->train_code }}</h3>
+            <h4>Comapny: {{ $train->company }}</h4>
             <p>
-                {{ $train->arr_station }}
+                Arrive Station: {{ $train->arr_station }}
             </p>
             <p>
-                {{ $train->dep_station }}
+                time: {{ $train->arr_time }}
             </p>
             <p>
-                {{ $train->arr_time }}
+                Departure Sattion: {{ $train->dep_station }}
             </p>
             <p>
-                {{ $train->dep_time }}
+                time: {{ $train->dep_time }}
             </p>
             <p>
-                {{ $train->wagons }}
+                Wagons number: {{ $train->wagons }}
             </p>
             <p>
-                {{ $train->on_time }}
+                {{ $train->on_time ? 'On time' : 'Delay' }}
             </p>
             <p>
-                {{ $train->canceled }}
+                {{ $train->canceled ? '' : 'Canceled' }}
             </p>
         </li>
     @endforeach
